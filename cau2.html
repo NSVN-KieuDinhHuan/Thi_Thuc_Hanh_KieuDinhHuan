@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    let arr0=[1,2,3,4,5,6,7]
+    let elment0=parseInt(prompt("Nhập phần tử cần tim kiếm:"))
+    findElementArray(elment0,arr0)
+    function findElementArray(element,arr){
+        let indexElement=-1;
+        for (let i=0;i<arr.length;i++){
+            if (element===arr[i]){
+                indexElement=i;
+                break;
+            }
+        }
+        if (indexElement!=-1){
+            document.write("Phân tử "+element+" ở vị trí "+indexElement+ " của mảng")
+        }else {
+            document.write("không có phần tử " +element + " ở trong mảng")
+        }
+
+    }
+</script>
+</body>
+</html>

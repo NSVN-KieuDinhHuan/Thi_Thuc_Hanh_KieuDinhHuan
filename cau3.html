@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau3</title>
+</head>
+<body>
+<script>
+
+    let str0=prompt("Nhập chuỗi ký tự")
+    let isVowel=findVowelCharacter(str0)
+    if (isVowel[0]===true){
+        document.write("số ký tự nguyên âm trong chuỗi là:" + isVowel[1])
+    }else{
+        document.write("số ký tự nguyên âm trong chuỗi là:" + isVowel[1])
+    }
+    function findVowelCharacter(str){
+        let VowelArr=["a","o","e","u","i"]
+        let count=0
+        for(let i=0;i<str.length;i++){
+            for (let j=0;j<VowelArr.length;j++){
+                if (str[i]===VowelArr[j]){
+                    count++
+                }
+            }
+        }
+      if ( count!==0){
+          return [true,count]
+      }else {
+          return [false,count]
+      }
+    }
+
+</script>
+</body>
+</html>
