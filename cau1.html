@@ -7,11 +7,18 @@
 <body>
 <script>
     //ax+b=0
-    let a0=prompt("nhập giá trị của a")
-    let b0=prompt("nhập giá trị của b")
-    document.write("Giá trị của y là:"+firstDegreeEquation(a0,b0))
+    let a0=parseFloat(prompt("nhập giá trị của a"))
+    let b0=parseFloat(prompt("nhập giá trị của b"))
+    document.write("x="+firstDegreeEquation(a0,b0))
     function firstDegreeEquation(a,b){
-        let x=-b/a;
+        let x
+        if(a!==0){
+             x=-b/a;
+        }else if(a===0&&b===0){
+            x=0
+        }else if(a==0&&b!=0){
+            x="vo nghiem"
+        }
         return x
     }
 
